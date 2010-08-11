@@ -39,6 +39,8 @@ map <F12> :NERDTreeToggle <CR>
 :map <C-n> :tabnew<cr><Leader>t
 :map <C-e> <Leader>t
 
+:map <C-g> :Gblame
+
 
 " Delete white space at the end of line
 
