@@ -66,3 +66,10 @@ set list listchars=tab:»·,trail:·
 " PHP support
 
 au FileType php au BufRead,BufNewFile * noremap <C-L> :!php -l %<CR>
+
+
+" Javascript support
+
+au FileType javascript set tabstop=2
+au FileType javascript set shiftwidth=2
+au FileType javascript set softtabstop=2
