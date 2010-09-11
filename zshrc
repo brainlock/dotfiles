@@ -40,6 +40,11 @@ if [ `uname -s` = "Linux" ]; then
   export PATH="$HOME/opt/android-sdk-linux_x86/tools:$PATH"
 fi
 
+if [ `uname -s` = "Darwin" ]; then
+  # macports support
+  export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+fi
+
 ########################
 # Aliases
 
@@ -67,6 +72,13 @@ if [ `uname -s` = "Linux" ]; then
   alias ack='ack-grep'
 fi
 
+if [ `uname -s` = "Darwin" ]; then
+  if [ `which -s gsed` ]; then
+    alias sed=gsed
+  fi
+
+  alias search='port search'
+fi
 
 ########################
 
