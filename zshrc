@@ -50,7 +50,6 @@ fi
 
 alias vi=vim
 
-alias ls='ls --color=auto'
 alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
@@ -70,6 +69,7 @@ if [ `uname -s` = "Linux" ]; then
   alias show='apt-cache show'
   alias open='gnome-open'
   alias ack='ack-grep'
+  alias ls='ls --color=auto'
 fi
 
 if [ `uname -s` = "Darwin" ]; then
@@ -77,6 +77,7 @@ if [ `uname -s` = "Darwin" ]; then
     alias sed=gsed
   fi
 
+  alias ls='ls -G'
   alias search='port search'
 fi
 
