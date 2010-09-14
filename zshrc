@@ -21,8 +21,8 @@ case $TERM in
 	# Put the string " [zsh]   hostname::/full/directory/path" in the title bar:
 		function settitle { print -Pn "\e]2;%n@%m: %~\a" }
 
-	# This updates after each change of directory:
-		function chpwd { settab;settitle }
+        # This updates before each prompt:
+        precmd () { settab;settitle }
 		settab;settitle
         ;;
 esac
