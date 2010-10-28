@@ -1,5 +1,9 @@
 # zsh setup and prompt borrowed from @pilif (http://github.com/pilif)
 
+function check_path(){
+  which $1 2>&1 > /dev/null
+}
+
 export EDITOR="vim"
 export LANG=en_US.utf-8
 HISTFILE=~/.zsh_history
@@ -73,8 +77,12 @@ if [ `uname -s` = "Linux" ]; then
 fi
 
 if [ `uname -s` = "Darwin" ]; then
-  if [ `which -s gsed` ]; then
+  if check_path 'gsed'; then
     alias sed=gsed
+  fi
+
+  if check_path 'gfind'; then
+    alias find=gfind
   fi
 
   alias ls='ls -G'
