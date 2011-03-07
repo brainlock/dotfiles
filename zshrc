@@ -68,7 +68,8 @@ alias g='git'
 alias gs='git status -s'
 alias gd='git diff'
 alias gdc='git diff --cached'
-alias gsm='git log --pretty=oneline --reverse master..'
+alias grl='git log --reverse --pretty=oneline'
+alias gsm='grl master..'
 
 if [ `uname -s` = "Linux" ]; then
   alias search='apt-cache search'
