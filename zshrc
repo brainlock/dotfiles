@@ -51,6 +51,9 @@ if [ `uname -s` = "Darwin" ]; then
   export PATH=$PATH:$HOME/opt/android-sdk/tools
 fi
 
+# RVM support
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
 ########################
 # Aliases
 
