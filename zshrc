@@ -38,7 +38,6 @@ setopt INC_APPEND_HISTORY EXTENDED_HISTORY HIST_IGNORE_DUPS HIST_EXPIRE_DUPS_FIR
 # PATH
 
 export PATH="$HOME/bin:$PATH"
-export PATH="$HOME/.gem/ruby/1.8/bin:$PATH"
 
 if [ `uname -s` = "Linux" ]; then
   export PATH="$HOME/opt/android-sdk-linux_x86/tools:$PATH"
