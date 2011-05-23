@@ -8,7 +8,6 @@ call pathogen#runtime_append_all_bundles()
 
 syntax on
 set autoindent
-set cindent
 set tabstop=4
 set expandtab
 set shiftwidth=4
