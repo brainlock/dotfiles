@@ -73,3 +73,7 @@ au FileType php au BufRead,BufNewFile * noremap <C-L> :!php -l %<CR>
 au FileType javascript set tabstop=2
 au FileType javascript set shiftwidth=2
 au FileType javascript set softtabstop=2
+
+" Use tabs in makefiles
+
+autocmd FileType make setlocal noexpandtab
