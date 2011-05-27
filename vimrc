@@ -15,6 +15,7 @@ set softtabstop=4
 set mouse=a
 set showtabline=2
 set backspace=indent,eol,start
+set ruler
 
 
 " Line numbers
