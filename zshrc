@@ -41,6 +41,7 @@ export PATH="$HOME/bin:$PATH"
 
 if [ `uname -s` = "Linux" ]; then
   export PATH="$HOME/opt/android-sdk-linux_x86/tools:$PATH"
+  export PATH="$HOME/opt/android-sdk-linux_x86/platform-tools:$PATH"
 fi
 
 if [ `uname -s` = "Darwin" ]; then
@@ -48,6 +49,7 @@ if [ `uname -s` = "Darwin" ]; then
   export PATH=/opt/local/bin:/opt/local/sbin:$PATH
   # android sdk
   export PATH=$PATH:$HOME/opt/android-sdk/tools
+  export PATH=$PATH:$HOME/opt/android-sdk/platform-tools
 
   # node.js
   export PATH=$HOME/opt/node/bin:$PATH
