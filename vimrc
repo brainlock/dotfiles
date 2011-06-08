@@ -17,6 +17,8 @@ set showtabline=2
 set backspace=indent,eol,start
 set ruler
 
+colorscheme railscasts
+
 
 " Line numbers
 
