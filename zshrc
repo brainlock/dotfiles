@@ -45,8 +45,6 @@ if [ `uname -s` = "Linux" ]; then
 fi
 
 if [ `uname -s` = "Darwin" ]; then
-  # macports support
-  export PATH=/opt/local/bin:/opt/local/sbin:$PATH
   # android sdk
   export PATH=$PATH:$HOME/opt/android-sdk/tools
   export PATH=$PATH:$HOME/opt/android-sdk/platform-tools
