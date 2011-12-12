@@ -18,6 +18,8 @@ bindkey    "\eOH"   beginning-of-line
 bindkey    "\eOF"   end-of-line
 bindkey    "^r"     history-incremental-search-backward
 
+setopt nonomatch
+
 case $TERM in
     *xterm*|ansi)
 	# Put the penultimate and current directory in the iterm tab:
