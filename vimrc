@@ -1,5 +1,4 @@
 " Pathogen
-filetype off
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 
@@ -7,6 +6,7 @@ call pathogen#runtime_append_all_bundles()
 " Some common settings
 
 syntax on
+filetype plugin indent on
 set autoindent
 set tabstop=4
 set expandtab
