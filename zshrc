@@ -52,7 +52,7 @@ if [ `uname -s` = "Darwin" ]; then
   export PATH=$PATH:$HOME/opt/android-sdk/platform-tools
 
   # node.js
-  export PATH=$HOME/opt/node/bin:$PATH
+  export NODE_PATH=/usr/local/lib/node_modules
 fi
 
 # RVM support
