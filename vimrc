@@ -86,3 +86,10 @@ au FileType javascript set softtabstop=4
 " Use tabs in makefiles
 
 autocmd FileType make setlocal noexpandtab
+
+
+" Ruby preferences
+
+au FileType ruby set tabstop=2
+au FileType ruby set shiftwidth=2
+au FileType ruby set softtabstop=2
