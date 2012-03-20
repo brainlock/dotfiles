@@ -47,15 +47,13 @@ map <F12> :NERDTreeToggle <CR>
 
 " Delete white space at the end of line
 
-function TrimWhiteSpace()
-  %s/\s*$//
-  ''
+function StripTrailingWhitespace()
+  let l:winview = winsaveview()
+  silent! %s/\s\+$//
+  call winrestview(l:winview)
 :endfunction
 
-autocmd FileType c,cpp,java,php,python autocmd FileWritePre * :call TrimWhiteSpace()
-autocmd FileType c,cpp,java,php,python autocmd FileAppendPre * :call TrimWhiteSpace()
-autocmd FileType c,cpp,java,php,python autocmd FilterWritePre * :call TrimWhiteSpace()
-autocmd FileType c,cpp,java,php,python autocmd BufWritePre * :call TrimWhiteSpace()
+autocmd FileType c,cpp,javascript,ruby,php,python autocmd BufWritePre * :call StripTrailingWhitespace()
 
 
 " Show tabs and white space
