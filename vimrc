@@ -81,9 +81,9 @@ au FileType javascript set softtabstop=2
 
 " CoffeeScript support
 
-au FileType javascript set tabstop=4
-au FileType javascript set shiftwidth=4
-au FileType javascript set softtabstop=4
+au FileType coffee set tabstop=2
+au FileType coffee set shiftwidth=2
+au FileType coffee set softtabstop=2
 
 " Use tabs in makefiles
 
