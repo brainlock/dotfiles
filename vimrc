@@ -19,6 +19,10 @@ set ruler
 
 colorscheme railscasts
 
+if has("gui_running")
+  set guifont=Menlo\ Regular:h18
+endif
+
 
 " Line numbers
 
