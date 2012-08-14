@@ -64,6 +64,9 @@ autocmd FileType c,cpp,javascript,ruby,php,python autocmd BufWritePre * :call St
 
 set list listchars=tab:»·,trail:·
 
+" Additional file types
+au BufNewFile,BufRead *.pp set filetype=puppet
+
 
 " Language-specific options. Maybe extract those to separate files at some
 " point.
@@ -95,3 +98,10 @@ autocmd FileType make setlocal noexpandtab
 au FileType ruby set tabstop=2
 au FileType ruby set shiftwidth=2
 au FileType ruby set softtabstop=2
+
+
+" Puppet
+
+au FileType puppet set tabstop=2
+au FileType puppet set shiftwidth=2
+au FileType puppet set softtabstop=2
