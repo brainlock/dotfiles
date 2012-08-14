@@ -75,6 +75,7 @@ alias g='git'
 alias gs='git status -s'
 alias gd='git diff'
 alias gdc='git diff --cached'
+alias gl='git log --pretty=oneline --graph --decorate=short'
 alias grl='git log --reverse --pretty=oneline'
 alias gsm='grl master..'
 
