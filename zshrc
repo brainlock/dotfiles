@@ -53,6 +53,9 @@ if [ `uname -s` = "Darwin" ]; then
 
   # node.js
   export NODE_PATH=/usr/local/lib/node_modules
+
+  # python packages from homebrew
+  export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
 fi
 
 # RVM support
