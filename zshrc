@@ -81,6 +81,7 @@ alias gdc='git diff --cached'
 alias gl='git log --pretty=oneline --graph --decorate=short'
 alias grl='git log --reverse --pretty=oneline'
 alias gsm='grl master..'
+alias gx='gitx'
 
 if [ `uname -s` = "Linux" ]; then
   alias search='apt-cache search'
