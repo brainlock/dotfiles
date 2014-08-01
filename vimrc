@@ -17,17 +17,16 @@ set showtabline=2
 set backspace=indent,eol,start
 set ruler
 
-colorscheme railscasts
+colorscheme github
 
 if has("gui_running")
-  set guifont=Menlo\ Regular:h18
+  set guifont=Menlo\ Regular:h16
 endif
 
 
 " Line numbers
 
 set number
-highlight LineNr ctermfg=White ctermbg=DarkGrey guifg=White guibg=DarkGrey
 
 
 " Key mappings
