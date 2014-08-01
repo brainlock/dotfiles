@@ -64,6 +64,18 @@ autocmd FileType c,cpp,javascript,ruby,php,python autocmd BufWritePre * :call St
 
 set list listchars=tab:»·,trail:·
 
+" http://vim.wikia.com/wiki/VimTip1386
+:set completeopt=longest,menuone
+:inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+:inoremap <expr> <C-n> pumvisible() ? '<C-n>' : '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+:inoremap <expr> <M-,> pumvisible() ? '<C-n>' : '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+
+
+" Close the Omni-Completion tip window when a selection is made.
+" http://stackoverflow.com/questions/3105307/how-do-you-automatically-remove-the-preview-window-after-autocompletion-in-vim
+autocmd CursorMovedI * if pumvisible() == 0|silent! pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|silent! pclose|endif
+
 " Additional file types
 au BufNewFile,BufRead *.pp set filetype=puppet
 
