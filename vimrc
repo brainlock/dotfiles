@@ -116,3 +116,11 @@ au FileType ruby set softtabstop=2
 au FileType puppet set tabstop=2
 au FileType puppet set shiftwidth=2
 au FileType puppet set softtabstop=2
+
+
+" Clojure
+
+au FileType clojure :RainbowParenthesesActivate
+au FileType clojure :RainbowParenthesesLoadRound
+au FileType clojure :RainbowParenthesesLoadSquare
+au FileType clojure :RainbowParenthesesLoadBraces
