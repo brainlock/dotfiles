@@ -33,8 +33,8 @@ set number
 
 map <F12> :NERDTreeToggle <CR>
 
-:nmap <S-Left> :tabprevious<cr>
-:nmap <S-Right> :tabnext<cr>
+:nmap <C-S-tab> :tabprevious<cr>
+:nmap <C-tab> :tabnext<cr>
 
 :nmap <C-t> :tabnew<cr>
 :imap <C-t> <ESC>:tabnew<cr>
