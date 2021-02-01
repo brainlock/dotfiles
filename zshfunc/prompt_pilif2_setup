@@ -20,8 +20,8 @@ prompt_pilif2_setup () {
   base_prompt="%B%F{$prompt_adam1_color1}%n@%m%f%b "
   post_prompt="%b%f%k"
 
-  base_prompt_no_color=$(echo "$base_prompt" | perl -pe "s/%(K{.*?}|k)//g")
-  post_prompt_no_color=$(echo "$post_prompt" | perl -pe "s/%(K{.*?}|k)//g")
+  base_prompt_no_color=$(echo "$base_prompt" | perl -pe "s/%(K\{.*?\}|k)//g")
+  post_prompt_no_color=$(echo "$post_prompt" | perl -pe "s/%(K\{.*?\}|k)//g")
 
   add-zsh-hook precmd prompt_pilif2_precmd
 }
