@@ -51,16 +51,7 @@ if [ `uname -s` = "Darwin" ]; then
   # android sdk
   export PATH=$PATH:$HOME/opt/android-sdk/tools
   export PATH=$PATH:$HOME/opt/android-sdk/platform-tools
-
-  # node.js
-  export NODE_PATH=/usr/local/lib/node_modules
-
-  # python packages from homebrew
-  export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
 fi
-
-# RVM support
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 ########################
 # Aliases
