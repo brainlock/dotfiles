@@ -6,6 +6,7 @@ function check_path(){
 
 export EDITOR="vim"
 export LANG=en_US.utf-8
+export LC_ALL=en_US.utf-8
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
