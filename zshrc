@@ -64,22 +64,17 @@ alias l='ls -CF'
 
 alias p='ps aux'
 
-alias pgrep='grep --color=auto -P'
-
 alias g='git'
 alias gs='git status -s'
 alias gd='git diff'
 alias gdc='git diff --cached'
 alias gl='git log --pretty=oneline --format="%cd %H %N %s" --no-merges'
 alias grl='git log --reverse --pretty=oneline'
-alias gsm='grl master..'
-alias gx='gitx'
 
 if [ `uname -s` = "Linux" ]; then
   alias search='apt-cache search'
   alias show='apt-cache show'
   alias open='gnome-open'
-  alias ack='ack-grep'
   alias ls='ls --color=auto'
 fi
 
@@ -93,7 +88,6 @@ if [ `uname -s` = "Darwin" ]; then
   fi
 
   alias ls='ls -G'
-  alias search='port search'
 fi
 
 ########################
