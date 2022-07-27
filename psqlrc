@@ -1,0 +1,15 @@
+\set QUIET ON
+
+\set PROMPT1 '%[%033[1m%][%M] %n@%/%[%033[0m%] %[%033[33;1m%]%x%[%033[0m%]%R%# '
+\set AUTOCOMMIT off
+\set ON_ERROR_ROLLBACK interactive
+\timing
+\pset null '¤'
+\x auto
+\pset linestyle 'unicode'
+\pset unicode_border_linestyle single
+\pset unicode_column_linestyle single
+\pset unicode_header_linestyle double
+\set intervalstyle to 'postgres_verbose';
+
+\set QUIET OFF
