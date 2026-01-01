@@ -31,6 +31,8 @@ set pager_stop = yes           # Don't jump to next message at end
 set menu_scroll = yes          # Scroll line-by-line instead of page
 set pager_context = 3          # Keep 3 lines of context when scrolling
 set pager_index_lines = 10     # Show index above message
+bind pager j next-line
+bind pager k previous-line
 
 source ~/.config/neomutt/colors-gruvbox-shuber.muttrc
 source ~/.config/neomutt/colors-gruvbox-shuber-extended.muttrc
