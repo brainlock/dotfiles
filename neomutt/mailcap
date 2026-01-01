@@ -1,0 +1,3 @@
+application/octet-stream; ~/.config/neomutt/view-attachment.sh %s | less -R; needsterminal
+text/x-diff; ~/.config/neomutt/view-attachment.sh %s | less -R; needsterminal
+text/x-patch; ~/.config/neomutt/view-attachment.sh %s | less -R; needsterminal

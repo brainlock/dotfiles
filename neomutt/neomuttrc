@@ -1,0 +1,40 @@
+set imap_user = "alberto.piai@gmail.com"
+set imap_pass = "`op read 'op://Private/GMail app specific password - mutt/password'`"
+
+# Only connect to the specific label
+set folder = "imaps://imap.gmail.com/"
+set spoolfile = "+pgsql-hackers"
+
+# Prevent neomutt from discovering other folders
+set imap_check_subscribed = no
+set imap_list_subscribed = no
+
+mailboxes "+pgsql-hackers"
+
+set header_cache = "~/.cache/neomutt/headers"
+set message_cachedir = "~/.cache/neomutt/bodies"
+set mail_check = 120
+set imap_keepalive = 300
+
+set sort = threads
+set sort_aux = reverse-last-date-received
+set collapse_all = yes
+
+set imap_pipeline_depth = 15  # Download headers in batches faster
+set net_inc = 50               # Update status every 50 messages
+
+set mailcap_path = "~/.config/neomutt/mailcap:$mailcap_path"
+
+auto_view text/x-diff text/x-patch application/octet-stream
+set pipe_decode = yes
+
+set pager_stop = yes           # Don't jump to next message at end
+set menu_scroll = yes          # Scroll line-by-line instead of page
+set pager_context = 3          # Keep 3 lines of context when scrolling
+set pager_index_lines = 10     # Show index above message
+
+source ~/.config/neomutt/colors-gruvbox-shuber.muttrc
+source ~/.config/neomutt/colors-gruvbox-shuber-extended.muttrc
+
+
+set sendmail = "/bin/false"
