@@ -25,7 +25,6 @@ set net_inc = 50               # Update status every 50 messages
 
 set mailcap_path = "~/.config/neomutt/mailcap:$mailcap_path"
 
-auto_view text/x-diff text/x-patch application/octet-stream
 set pipe_decode = yes
 
 set pager_stop = yes           # Don't jump to next message at end

@@ -1,3 +1,6 @@
-application/octet-stream; ~/.config/neomutt/view-attachment.sh %s | less -R; needsterminal
-text/x-diff; ~/.config/neomutt/view-attachment.sh %s | less -R; needsterminal
-text/x-patch; ~/.config/neomutt/view-attachment.sh %s | less -R; needsterminal
+application/octet-stream;    bat --style=full --color=always %s;
+text/x-diff;                 bat --style=full --color=always %s;
+text/x-patch;                bat --style=full --color=always %s;
+application/x-diff;          bat --style=full --color=always %s;
+application/x-patch;         bat --style=full --color=always %s;
+text/plain;                  bat --style=full --color=always %s;
