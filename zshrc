@@ -4,6 +4,26 @@ function check_path(){
   which $1 2>&1 > /dev/null
 }
 
+function ns() {
+  if [[ -z "$1" ]]; then
+    echo "Start a nested nix shell with the given packages"
+    echo "Usage: ns <package-names>"
+    return 1
+  fi
+
+  typeset -T -U NESTED_NIX_SHELL_NAME nix_packages ' '
+  nix_packages+=( ${NIX_SHELL_NAME:+"$NIX_SHELL_NAME"} )
+
+  local nix_args=()
+
+  for pkg in "$@"; do
+    nix_args+=("nixpkgs#$pkg")
+    nix_packages+=($pkg)
+  done
+
+  NIX_SHELL_NAME="$NESTED_NIX_SHELL_NAME" nix shell "${nix_args[@]}"
+}
+
 export EDITOR="vim"
 export LANG=en_US.utf-8
 export LC_ALL=en_US.utf-8

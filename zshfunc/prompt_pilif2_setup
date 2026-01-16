@@ -31,6 +31,9 @@ prompt_pilif2_precmd () {
   local base_prompt_expanded_no_color base_prompt_etc
   local prompt_length space_left
   local git_branch
+  local nesting
+  local nesting_indicator
+  local nix_shell_info
 
   git_branch="`git branch 2>/dev/null | grep -e '^*' | sed -r 's/^\* (.+)$/[\1]/'`"
   if [[ " $git_branch" != " " ]]; then
@@ -46,7 +49,20 @@ prompt_pilif2_precmd () {
     space_left=$(( $COLUMNS - $#base_prompt_expanded_no_color - 2 ))
     path_prompt="%B%F{$prompt_adam1_color3}%${space_left}<...<%~%F{red}$git_branch$prompt_newline%F{white}"
   fi
-  PS1="$base_prompt$path_prompt %# $post_prompt"
+
+  nesting=$(expr ${SHLVL:-1} - 1)
+  if [[ nesting -gt 0 ]]; then
+    nesting_indicator=$(printf "%${nesting}s" | tr " " ">")
+    path_prompt="$nesting_indicator $path_prompt"
+  fi
+
+  if [[ -n "$NIX_SHELL_NAME" ]]; then
+    nix_shell_info=$'\n'"%F{blue}(nix: $NIX_SHELL_NAME)%f"$'\n'
+  else
+    nix_shell_info=""
+  fi
+
+  PS1="$nix_shell_info$base_prompt$path_prompt %# $post_prompt"
   PS2="$base_prompt$path_prompt %_> $post_prompt"
   PS3="$base_prompt$path_prompt ?# $post_prompt"
 }
