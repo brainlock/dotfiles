@@ -1,0 +1,12 @@
+[init]
+	defaultBranch = main
+[user]
+	name = Alberto Piai
+    email = alberto.piai@gmail.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIC5yl2m2OsWfFQJz71UJv5yMl24QI/Tz9KBs6xb26qku
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = op-ssh-sign
+[commit]
+	gpgsign = true
